@@ -64,7 +64,7 @@ def getSilverRates(place="india"):
 	res=requests.get(link,headers=headers)
 	soup=BeautifulSoup(res.text,"lxml")
 
-	rates={"location":place.upper().replace("-"," "),"variations per 10g":{}}
+	rates={"location":place.upper().replace("-"," "),"variations per Kg":{}}
 
 	temp=soup.findAll("div",{"class":"data-box-half"})[1].findAll("div")
 	rates[temp[0].text]={}
