@@ -53,7 +53,7 @@ def getGoldRates(place="india"):
 
 	for i in soup.findAll("table",{"class":"data"})[0].findAll("tr")[1:]:
 		j=i.findAll("td")
-		rates["variations per 10g"][j[0].text]=j[2].text
+		rates["variations per kg"][j[0].text]=j[2].text
 
 	return rates
 	
